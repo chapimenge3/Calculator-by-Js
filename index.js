@@ -4,6 +4,11 @@ class Calculator {
         this.previosOperandTextElement = previosOperandTextElement;
         this.clear();
     }
+    clear() {
+        this.currentOperand = '';
+        this.previousOperand = '';
+        this.operation = undefined;
+    }
 
 }
 
