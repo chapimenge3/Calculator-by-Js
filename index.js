@@ -13,3 +13,11 @@ numberButton.forEach(button => {
         calculator.updateDisplay();
     })
 })
+
+operationButton.forEach(button => {
+    button.addEventListener('click', () => {
+        console.log("chap");
+        calculator.chooseOperation(button.innerText);
+        calculator.updateDisplay();
+    })
+})
