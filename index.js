@@ -18,7 +18,16 @@ class Calculator {
         this.currentOperand = this.currentOperand.toString() + number.toString();
 
     }
-
+    chooseOperation(operation) {
+        if (this.currentOperand === '') return;
+        if (this.previousOperand !== '') {
+            this.compute();
+        }
+        this.operation = operation;
+        console.log(this.operation);
+        this.previousOperand = this.currentOperand;
+        this.currentOperand = '';
+    }
 }
 
 const numberButton = document.querySelectorAll('[data-number]');
