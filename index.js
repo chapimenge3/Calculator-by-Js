@@ -69,6 +69,16 @@ class Calculator {
             return integerDisplay;
         }
     }
+    updateDisplay() {
+        this.currentOperandTextElement.innerText = this.displayNumber(this.currentOperand);
+        if (this.operation !== undefined) {
+            this.previosOperandTextElement.innerText =
+                this.displayNumber(this.previousOperand) + this.operation.toString();
+        } else {
+            this.previosOperandTextElement.innerText =
+                this.displayNumber(this.previousOperand);
+        }
+    }
 }
 
 const numberButton = document.querySelectorAll('[data-number]');
