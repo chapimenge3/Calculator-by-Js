@@ -9,6 +9,6 @@ it have cool features
 
 ![Example 1](https://github.com/chapimenge3/Calculator-by-Js/blob/master/example1.jpeg)
  
-## To also have number recognition which separate by commas and calculator huge numbers
+## It also have number recognition which separate by commas and calculator huge numbers
 
 ![Example 2](https://github.com/chapimenge3/Calculator-by-Js/blob/master/example2.jpeg)
