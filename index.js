@@ -28,6 +28,31 @@ class Calculator {
         this.previousOperand = this.currentOperand;
         this.currentOperand = '';
     }
+    compute() {
+        let computation;
+        const prev = parseFloat(this.previousOperand);
+        const curr = parseFloat(this.currentOperand);
+        if (isNaN(prev) || isNaN(curr)) return;
+        switch (this.operation) {
+            case '+':
+                computation = prev + curr;
+                break;
+            case '-':
+                computation = prev - curr;
+                break;
+            case '/':
+                computation = prev / curr;
+                break;
+            case '*':
+                computation = prev * curr;
+                break;
+            default:
+                return;
+        }
+        this.currentOperand = computation;
+        this.operation = undefined;
+        this.previousOperand = '';
+    }
 }
 
 const numberButton = document.querySelectorAll('[data-number]');
