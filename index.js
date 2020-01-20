@@ -53,6 +53,22 @@ class Calculator {
         this.operation = undefined;
         this.previousOperand = '';
     }
+    displayNumber(number) {
+        const decimalDigit = number.toString().split('.')[1]
+        const integerDigit = parseFloat(number.toString().split('.')[0]);
+        let integerDisplay;
+        if (isNaN(integerDigit)) {
+            integerDisplay = '';
+        } else {
+            integerDisplay =
+                integerDigit.toLocaleString('en', { maximumFractionDigits: 0 });
+        }
+        if (decimalDigit != null) {
+            return `${integerDisplay}.${decimalDigit.toString()}`
+        } else {
+            return integerDisplay;
+        }
+    }
 }
 
 const numberButton = document.querySelectorAll('[data-number]');
