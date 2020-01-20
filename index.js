@@ -1,3 +1,12 @@
+class Calculator {
+    constructor(previosOperandTextElement, currentOperandTextElement) {
+        this.currentOperandTextElement = currentOperandTextElement;
+        this.previosOperandTextElement = previosOperandTextElement;
+        this.clear();
+    }
+
+}
+
 const numberButton = document.querySelectorAll('[data-number]');
 const operationButton = document.querySelectorAll('[data-operation]');
 const equalsButton = document.querySelector('[data-equals]');
